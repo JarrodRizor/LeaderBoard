@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Score;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -16,7 +16,8 @@ class ScoresController extends Controller
      */
     public function index()
     {
-        //
+        $scores = Score::all();
+        return view("scores.index")->with("scores", $scores);
     }
 
     /**

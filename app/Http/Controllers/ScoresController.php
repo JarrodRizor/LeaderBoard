@@ -11,7 +11,7 @@ use App\Score;
 class ScoresController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display a listng of the resource.
      *
      * @return Response
      */

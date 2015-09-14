@@ -8,7 +8,7 @@
 <body>
 
 <div class="container">
-    @yield('scores')
+    @yield('content')
 </div>
 
 </body>

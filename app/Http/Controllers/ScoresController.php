@@ -6,17 +6,19 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Score;
 
 class ScoresController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display a listng of the resource.
      *
      * @return Response
      */
     public function index()
     {
-        //
+        $score = Score::all();
+        return view('index')->with("score", $score);
     }
 
     /**

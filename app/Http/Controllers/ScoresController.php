@@ -17,13 +17,8 @@ class ScoresController extends Controller
      */
     public function index()
     {
-<<<<<<< HEAD
-        $score = Score::all();
-        return view('index')->with("score", $score);
-=======
         $scores = Score::all();
         return view("scores.index")->with("scores", $scores);
->>>>>>> theme
     }
 
     /**

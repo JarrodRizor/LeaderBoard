@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use App\Score;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Score;
 
 class ScoresController extends Controller
 {

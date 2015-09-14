@@ -1,6 +1,9 @@
 @extends("master")
 
 @section("content")
-    @foreach($score as $scores)
-        <p>{{ $scores->name }}</p>
+    @foreach($scores as $score)
+        <p>{{ $score->name }}
+            <span>Scores: {{ $score->score }}</span>
+        </p>
+    @endforeach
 @stop

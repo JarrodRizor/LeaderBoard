@@ -17,7 +17,7 @@ class ScoresController extends Controller
      */
     public function index()
     {
-        $scores = Score::all();
+        $scores = Score::orderBy('score', 'DESC')->get();
         return view("scores.index")->with("scores", $scores);
     }
 

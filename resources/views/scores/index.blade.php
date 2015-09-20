@@ -27,9 +27,19 @@
 
     <h2>Leaderboard</h2>
     <!-- Loop Scores -->
-    @foreach($scores as $score)
-        <p>{{ $score->name }}
-            <span>Scores: {{ $score->score }}</span>
-        </p>
+    <table class="table table-striped">
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Score</th>
+        </tr>
+    @foreach($scores as $index => $score)
+            <tr>
+                <td>{{ ++$index }}</td>
+                <td>{{ $score->name }}</td>
+                <td>{{ $score->score }}</td>
+            </tr>
     @endforeach
+
+    </table>
 @stop

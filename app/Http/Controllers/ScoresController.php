@@ -10,7 +10,7 @@ use App\Http\Controllers\Controller;
 class ScoresController extends Controller
 {
     /**
-     * Display a listng of the resource.
+     * Display a listing of the resource.
      *
      * @return Response
      */

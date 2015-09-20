@@ -38,7 +38,10 @@ class ScoresController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        Score::create($data);
+
+        redirect("/scores/");
     }
 
     /**

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Score;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ScoreRequest;
 
 class ScoresController extends Controller
 {
@@ -33,15 +34,15 @@ class ScoresController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  Request  $request
+     * @param  ScoreRequest  $request
      * @return Response
      */
-    public function store(Request $request)
+    public function store(ScoreRequest $request)
     {
         $data = $request->all();
         Score::create($data);
 
-        redirect("/scores/");
+        return redirect("scores");
     }
 
     /**

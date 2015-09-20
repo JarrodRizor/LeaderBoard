@@ -32,12 +32,14 @@
             <th>#</th>
             <th>Name</th>
             <th>Score</th>
+            <th>Delete</th>
         </tr>
     @foreach($scores as $index => $score)
             <tr>
                 <td>{{ ++$index }}</td>
                 <td>{{ $score->name }}</td>
                 <td>{{ $score->score }}</td>
+                <td><button class="btn-danger">Delete</button></td>
             </tr>
     @endforeach
 

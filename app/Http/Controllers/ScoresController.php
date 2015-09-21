@@ -7,6 +7,7 @@ use App\Score;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ScoreRequest;
+use Illuminate\Support\Facades\Session;
 
 class ScoresController extends Controller
 {
@@ -41,6 +42,8 @@ class ScoresController extends Controller
     {
         $data = $request->all();
         Score::create($data);
+
+        Session::flash("flash_message", "User has been added");
 
         return redirect("scores");
     }
@@ -89,6 +92,8 @@ class ScoresController extends Controller
     {
         $data = Score::findOrFail($id);
         $data->delete();
+
+        Session::flash("flash_message", "User has been deleted");
 
         return redirect("scores");
     }

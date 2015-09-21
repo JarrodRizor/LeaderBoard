@@ -25,7 +25,8 @@ class ScoreRequest extends Request
     {
         return [
             'name' => "required|string|min:5",
-            'score' => "required|numeric|min:0"
+            'score' => "required|numeric|min:0",
+            'twitter' => "unique:scores"
         ];
     }
 }

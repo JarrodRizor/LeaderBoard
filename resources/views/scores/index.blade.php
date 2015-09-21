@@ -33,7 +33,7 @@
     <!-- Loop Scores -->
     <table class="table table-striped">
         <tr>
-            <th>#</th>
+            <th>Place</th>
             <th>Name</th>
             <th>Twitter</th>
             <th>Score</th>

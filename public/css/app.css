@@ -5991,4 +5991,7 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
+ul.alert li {
+  margin-left: 1em; }
+
 /*# sourceMappingURL=app.css.map */

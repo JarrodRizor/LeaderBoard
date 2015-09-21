@@ -35,7 +35,7 @@
         <tr>
             <th>Place</th>
             <th>Name</th>
-            <th>Twitter</th>
+            <th>Twitter (optional)</th>
             <th>Score</th>
             <th>Delete</th>
         </tr>

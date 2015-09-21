@@ -87,7 +87,10 @@ class ScoresController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $data = Score::findOrFail($id);
+        $data->delete();
+
+        return redirect("scores");
     }
 
 }

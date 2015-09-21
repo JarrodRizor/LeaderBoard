@@ -50,7 +50,13 @@
                         @endif
                 </td>
                 <td>{{ $score->score }}</td>
-                <td><button class="btn-danger">Delete</button></td>
+                <td>
+                    <form method="post" action="{{ url("scores/". $score->id) }} ">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                        <input type="submit" value="delete" class="btn-danger">
+                    </form>
+                </td>
             </tr>
     @endforeach
 

@@ -11,6 +11,8 @@ use Illuminate\Support\Facades\Session;
 
 class ScoresController extends Controller
 {
+    protected $score;
+
     /**
      * Display a listing of the resource.
      *
@@ -19,7 +21,7 @@ class ScoresController extends Controller
     public function index()
     {
         $scores = Score::orderBy('score', 'DESC')->limit(20)->get();
-        return view("scores.index")->with("scores", $scores);
+        return $scores;
     }
 
     /**
@@ -29,7 +31,7 @@ class ScoresController extends Controller
      */
     public function create()
     {
-        //
+        return view("scores.index")->with("scores", $this->index());
     }
 
     /**
@@ -45,7 +47,7 @@ class ScoresController extends Controller
 
         Session::flash("flash_message", "User has been added");
 
-        return redirect("scores");
+        return $this->goHome();
     }
 
     /**
@@ -95,7 +97,15 @@ class ScoresController extends Controller
 
         Session::flash("flash_message", "User has been deleted");
 
-        return redirect("scores");
+        return $this->goHome();
+    }
+
+    /**
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
+    public function goHome()
+    {
+        return redirect("/");
     }
 
 }

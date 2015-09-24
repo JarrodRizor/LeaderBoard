@@ -13,7 +13,8 @@ class ScoresController extends Controller
 {
     protected $score;
 
-    public function __construct(){
+    public function __construct()
+    {
         return $this->score;
     }
     /**
@@ -29,8 +30,6 @@ class ScoresController extends Controller
 
     /**
      * Show the form for creating a new resource.
-     *
-     * @return Response
      */
     public function create()
     {

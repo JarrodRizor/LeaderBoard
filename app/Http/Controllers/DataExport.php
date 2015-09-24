@@ -12,15 +12,24 @@ use App\Http\Controllers\ScoresController;
 class DataExport extends Controller
 {
     /**
-     * Exports content as csv file
+     * Create an object for scores and convert it to an Array.
      *
-     * Reads ScoreController json and saves csv file
+     * @return Data
      */
-    public function exportCSV(){
+    private function getScoresData()
+    {
         $scoreController = new ScoresController();
-        $excel = new SimpleExcel('csv');
         $data = json_decode($scoreController->index(), true);
-        $excel->writer->setData($data);
+        return $data;
+    }
+
+    /**
+     * Save data as CSV
+     */
+    public function exportCSV()
+    {
+        $excel = new SimpleExcel('csv');
+        $excel->writer->setData($this->getScoresData());
         $excel->writer->saveFile('scores');
     }
 }

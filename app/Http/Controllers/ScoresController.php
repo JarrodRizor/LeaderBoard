@@ -13,6 +13,9 @@ class ScoresController extends Controller
 {
     protected $score;
 
+    public function __construct(){
+        return $this->score;
+    }
     /**
      * Display a listing of the resource.
      *

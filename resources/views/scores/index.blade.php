@@ -67,4 +67,6 @@
     @endforeach
 
     </table>
+
+    <a href="{{ url("exportCSV") }}">Download CSV</a>
 @stop

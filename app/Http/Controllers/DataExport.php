@@ -18,8 +18,8 @@ class DataExport extends Controller
      */
     public function exportCSV(){
         $scoreController = new ScoresController();
-        $data = json_decode($scoreController->index(), true);
         $excel = new SimpleExcel('csv');
+        $data = json_decode($scoreController->index(), true);
         $excel->writer->setData($data);
         $excel->writer->saveFile('scores');
     }

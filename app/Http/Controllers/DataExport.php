@@ -30,6 +30,7 @@ class DataExport extends Controller
     {
         $excel = new SimpleExcel('csv');
         $excel->writer->setData($this->getScoresData());
+        $excel->writer->addRow(array('id', 'Name', 'Score', 'Twitter'), false);
         $excel->writer->saveFile('scores');
     }
 }

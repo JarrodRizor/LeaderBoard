@@ -45,6 +45,9 @@ class ScoresController extends Controller
     public function store(ScoreRequest $request)
     {
         $data = $request->all();
+        if(empty($data['twitter'])){
+            $data['twitter'] = null;
+        }
         Score::create($data);
 
         Session::flash("flash_message", "User has been added");

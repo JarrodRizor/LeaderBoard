@@ -24,7 +24,7 @@ class ScoreRequest extends Request
     public function rules()
     {
         return [
-            'name' => "required|string|min:5",
+            'name' => "required|string|min:2",
             'score' => "required|numeric|min:0",
             'twitter' => "unique:scores"
         ];

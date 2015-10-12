@@ -3,7 +3,7 @@
 ## Welcome
 
 LeaderBoard is open-source software that was built for the Ohio Game Developer Expo to help keep track of users and the
-scores they would receive in their games. It is built off the [Laravel 5.1 Framework]. (http://laravel.com/docs/5.1).
+scores they would receive in their games. It is built off the [Laravel 5.1 Framework](http://laravel.com/docs/5.1).
 Feel free to download and do as you please.
 
 
@@ -16,28 +16,28 @@ Feel free to download and do as you please.
 
 1. Move into directory
 
-cd LeaderBoard
+    cd LeaderBoard
 
 2. Run Composer to install vendor directory and libraries
 
-composer install
+    composer install
 
 3. create environment file
 
-cp .env.example .env
+    cp .env.example .env
 
 4. Create Key
 
-php artisan key:generate
+    php artisan key:generate
 
 5. Create Database
 
-echo "" > storage/database.sqlite
-php artisan migrate
+    echo "" > storage/database.sqlite
+    php artisan migrate
 
 6. Run on PHP
 
-php -S localhost:8888 -t public (make sure you are in the root of the LeaderBoard application)
+    php -S localhost:8888 -t public (make sure you are in the root of the LeaderBoard application)
 
 7. Enjoy!
 

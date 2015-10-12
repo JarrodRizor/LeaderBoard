@@ -15,7 +15,7 @@ class DataExport extends Controller
     /**
      * Create an object for scores and convert it to an Array.
      *
-     * @return Data
+     * @return array Data
      */
     private function getScoresData()
     {
@@ -29,15 +29,13 @@ class DataExport extends Controller
      */
     public function exportCSV()
     {
-        Excel::create('LeaderBoard Data', function($excel) {
-
-            $excel->sheet('Excel sheet', function($sheet) {
+        Excel::create('LeaderBoard Data', function($excel)
+        {
+            $excel->sheet('Excel sheet', function($sheet)
+            {
                 $sheet->setOrientation('landscape');
                 $sheet->fromArray($this->getScoresData());
             });
-
         })->export('csv');
     }
 }
-
-

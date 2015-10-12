@@ -34,11 +34,11 @@ Feel free to download and do as you please.
 
     1. Create the database sqlite file
 
-        echo "" > storage/database.sqlite
+            echo "" > storage/database.sqlite
 
     2. This will install tables
 
-        php artisan migrate
+            php artisan migrate
 
 6. Run on PHP
 

@@ -6,11 +6,12 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use SimpleExcel\SimpleExcel;
 use App\Http\Controllers\ScoresController;
+use Excel;
 
 class DataExport extends Controller
 {
+
     /**
      * Create an object for scores and convert it to an Array.
      *
@@ -28,9 +29,15 @@ class DataExport extends Controller
      */
     public function exportCSV()
     {
-        $excel = new SimpleExcel('csv');
-        $excel->writer->setData($this->getScoresData());
-        $excel->writer->addRow(array('id', 'Name', 'Score', 'Twitter'), false);
-        $excel->writer->saveFile('scores');
+        Excel::create('LeaderBoard Data', function($excel) {
+
+            $excel->sheet('Excel sheet', function($sheet) {
+                $sheet->setOrientation('landscape');
+                $sheet->fromArray($this->getScoresData());
+            });
+
+        })->export('csv');
     }
 }
+
+

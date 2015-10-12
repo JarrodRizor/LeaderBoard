@@ -20,24 +20,26 @@ Feel free to download and do as you please.
 
 2. Run Composer to install vendor directory and libraries
 
-    composer install
+        composer install
 
 3. create environment file
 
-    cp .env.example .env
+        cp .env.example .env
 
 4. Create Key
 
-    php artisan key:generate
+        php artisan key:generate
 
 5. Create Database
 
-    echo "" > storage/database.sqlite
-    php artisan migrate
+    1. Create the database sqlite file
+            echo "" > storage/database.sqlite
+    2. This will install tables
+            php artisan migrate
 
 6. Run on PHP
 
-    php -S localhost:8888 -t public (make sure you are in the root of the LeaderBoard application)
+        php -S localhost:8888 -t public (make sure you are in the root of the LeaderBoard application)
 
 7. Enjoy!
 

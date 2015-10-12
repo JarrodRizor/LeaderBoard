@@ -1,27 +1,47 @@
-## Laravel PHP Framework
+# LeaderBoard
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+## Welcome
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+LeaderBoard is open-source software that was built for the Ohio Game Developer Expo to help keep track of users and the
+scores they would receive in their games. It is built off the [Laravel 5.1 Framework]. (http://laravel.com/docs/5.1).
+Feel free to download and do as you please.
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
 
-## Official Documentation
+## Requirements
+1. Git
+2. PHP
+3. Composer
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+## Install
 
-## Contributing
+1. Move into directory
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+cd LeaderBoard
 
-## Security Vulnerabilities
+2. Run Composer to install vendor directory and libraries
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+composer install
+
+3. create environment file
+
+cp .env.example .env
+
+4. Create Key
+
+php artisan key:generate
+
+5. Create Database
+
+echo "" > storage/database.sqlite
+php artisan migrate
+
+6. Run on PHP
+
+php -S localhost:8888 -t public (make sure you are in the root of the LeaderBoard application)
+
+7. Enjoy!
 
 ### License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+LeaderBoard is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+Do what you want and have fun.

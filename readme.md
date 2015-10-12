@@ -16,7 +16,7 @@ Feel free to download and do as you please.
 
 1. Move into directory
 
-    cd LeaderBoard
+        cd LeaderBoard
 
 2. Run Composer to install vendor directory and libraries
 
